@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Responsive Landing Page</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: transparent;
+      padding: 15px 0;
+      transition: background-color 0.3s;
+      z-index: 1000;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul li {
+      margin: 0 20px;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      color: #ffd700;
+    }
+
+    .scrolled {
+      background-color: #111;
+    }
+
+    /* SECTIONS */
+    section {
+      min-height: 100vh;
+      padding: 100px 40px 40px;
+      text-align: center;
+    }
+
+    #home {
+      background-color: #730925;
+      color: white;
+    }
+
+    #about {
+      background-color: #c5abab;
+      color: #160505;
+    }
+
+    #contact {
+      background-color: #e1e7ee;
+      color: #333;
+    }
+
+    h1, h2 {
+      margin-bottom: 15px;
+    }
+
+    p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 16px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <div class="navbar" id="navbar">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- HOME -->
+  <section id="home">
+    <h1>Responsive Landing Page</h1>
+    <p>
+      This landing page was created as part of my web development learning process.</br>
+      Scroll down to see the navigation menu change color.
+    </p>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About This Project</h2>
+    <p>
+      This page uses HTML for structure, CSS for styling, and JavaScript for interactivity.
+    </p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+       Email: arshimnansari22@gmail.com
+    </p>
+  </section>
+
+  <!-- JAVASCRIPT -->
+  <script>
+    window.addEventListener("scroll", function () {
+      var navbar = document.getElementById("navbar");
+
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  </script>
+
+</body>
+</html>
